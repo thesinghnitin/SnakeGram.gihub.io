@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.body{
+    background: url("../bg11.jpg");
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#board{
+    background: linear-gradient(rgb(59, 47, 129),rgb(48, 138, 173));
+    width: 90vmin;
+    height: 92vmin;
+    flex-basis: 40%;
+    /* margin-top: 40px; */
+    margin-left: 15px;
+    display: grid;
+    grid-template-rows: repeat(18,1fr);
+    grid-template-columns: repeat(18,1fr);
+    border-radius: 20px;
+
+}
+
+.head{
+
+    /* background: linear-gradient(red,yellow); */
+    /* background-color: green; */
+    /* border: 2px solid purple; */
+     background: url("../h6.jpg") no-repeat center center;
+    background-size: cover; 
+     
+    border-radius: 20px;
+    transform: scale(1.1)
+    animation: b 1s linear 0s infinite;
+    /* transform: skew(30deg,20deg) */
+    
+}
+
+@keyframes b {
+    from {transform: scale(0.8);}
+    to {transform: scale(1.5);}
+  }
+
+
+
+.snake{
+    /* background-color: purple; */
+
+     background: url("../bg51.jpg") no-repeat center center;
+    background-size: cover;
+   /* background: linear-gradient(green, yellow); */
+    border: .25vmin solid white;
+    border-radius: 9px;
+}
+
+
+
+.food{
+    /* background: linear-gradient(red, purple); */
+    /* background: url("../apple1.png"); */
+    /* background-color: white; */
+    background: url("../apple2.png") no-repeat center center;
+    background-size: cover;
+    
+
+    /* border: .25vmin solid black; */
+    /* border-radius: 30px; */
+    animation: big 1s linear 0s infinite ;
+}
+
+@keyframes big {
+    from {transform: scale(0.8);}
+    to {transform: scale(1.5);}
+  }
+
+#scoreBox{
+    color: white;
+    position: absolute;
+    top:125px;
+    /* right:155px; */
+    left:1045px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+#highscoreBox{
+    color: white;
+    position: absolute;
+    top:170px;
+    right:40px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.tree{
+    color: white;
+    position: absolute;
+    top:0px;
+    right:0px;
+    width: 400px;
+    height: 200px;
+    /* top:100px;
+    right:100px; */
+    background: url("../tree.png") no-repeat center center;
+    background-size: cover;
+}
+
+.t{
+    position: absolute;
+    left:35%;
+    top: 62%;
+    width: 300px;
+    height: 170px;
+    /* background: url("../t.png") no-repeat center center; */
+    background-size: contain;
+    /* animation: hiss 1s linear 0s infinite; */
+    /* transition: 10s; */
+    
+
+}
+
+@keyframes hiss {
+    from {transform: rotate(0deg)
+    width:300px}
+    to {transform: rotate(30deg); }
+        /* height:100px;} */
+        /* width: 0px; } */
+  }
